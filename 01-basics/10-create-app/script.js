@@ -1,11 +1,13 @@
 import { defineComponent, createApp } from 'vue'
 
 const Comp = defineComponent({
+    name: "Отображение даты в локализованном формате",
+
     setup() {
         const today = new Date();
 
         function formatAsLocalDate(date) {
-            return new Date(date).toLocaleDateString('ru-RU', {
+            return new Date(date).toLocaleDateString(navigator.language, {
                 dateStyle: 'long'
             });
         }
