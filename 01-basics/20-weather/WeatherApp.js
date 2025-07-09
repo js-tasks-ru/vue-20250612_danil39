@@ -45,7 +45,7 @@ export default defineComponent({
             <span class="weather-alert__description">{{ weatherCity.alert.sender_name }} {{ weatherCity.alert.description }}</span>
           </div>
           <div>
-            <h2 class="weather-card__name" v-if="">
+            <h2 class="weather-card__name">
               {{ weatherCity.geographic_name }}
             </h2>
             <div class="weather-card__time">
@@ -53,7 +53,7 @@ export default defineComponent({
             </div>
           </div>
           <div class="weather-conditions">
-            <div class="weather-conditions__icon" title="thunderstorm with heavy rain">{{ weatherConditionIcons[weatherCity.current.weather.id] }}</div>
+            <div class="weather-conditions__icon" :title="weatherCity.current.weather.description">{{ weatherConditionIcons[weatherCity.current.weather.id] }}</div>
             <div class="weather-conditions__temp">{{ (weatherCity.current.temp - zeroCelsiusInKelvin).toFixed(1) }} °C</div>
           </div>
           <div class="weather-details">
