@@ -8,7 +8,7 @@ import PageIndex from './views/PageIndex.vue'
   <div class="wrapper">
     <MeetupsHeader />
     <main class="main">
-      <PageIndex />
+      <router-view />
     </main>
     <MeetupsFooter />
   </div>
